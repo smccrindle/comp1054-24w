@@ -1,2 +1,105 @@
 @charset "UTF-8";
 
+/* Named Selector
+------------------------------------------------------- */
+h2 {
+	color: red;
+}
+
+/* ID Selector
+------------------------------------------------------- */
+h2#project {
+	color: olive;
+}
+
+/* Class Selector
+------------------------------------------------------- */
+.project {
+	background-color: lightgrey;
+}
+
+/* Contextual/Descendent Selector
+------------------------------------------------------- */
+section p {
+	color: cyan;
+}
+.about p {
+	color: orange;
+}
+.about section p {
+	color: lime;
+}
+
+/* Grouped Selector
+------------------------------------------------------- */
+h1, h2, h3 {
+	font-family: sans-serif;
+}
+
+/* Pseudo-Class Selector
+------------------------------------------------------- */
+a:link {
+	color: lightsalmon;
+}
+a:visited {
+	color: darkslategrey;
+}
+a:focus {
+	background-color: darkmagenta;
+}
+a:hover {
+	color: hotpink;
+}
+a:active {
+	color: black;
+}
+
+/* Structural Pseudo-Class Selector
+------------------------------------------------------- */
+li:nth-child(3n-1) {
+	background-color: yellow;
+}
+li:nth-of-type(even) {
+	font-weight: bold;
+}
+
+.about > h1:first-child {
+	background-color: lightblue;
+}
+
+article section:last-of-type {
+	background-color: lightpink;
+}
+
+/* Pseudo-Element Selector
+------------------------------------------------------- */
+p::first-line {
+	text-transform: uppercase;
+}
+h1::before {
+	content: "NOTE: ";
+}
+
+/* Combinator Selector
+------------------------------------------------------- */
+article p ~ p {
+	border: 5px dotted red;
+}
+
+h1 + p {
+	background-color: aquamarine;
+}
+
+/* Attribute Selector
+------------------------------------------------------- */
+span[lang^="e"] {
+	font-style: italic;
+}
+a[href$=".pdf"] {
+
+}
+/* Getting Crazy
+------------------------------------------------------- */
+.project h2[lang="es"] + p em {
+	background: darkblue;
+}
