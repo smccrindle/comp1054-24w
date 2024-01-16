@@ -11,12 +11,12 @@ html {
 	font-family: Garamond, Georgia, "Times New Roman", serif;
 	background: #111;
 	/* STEP 10a: set the background image */
-	
+	background-image: url("../images/how-much.jpg");
 	/* Image credit: How much? by el patojo CC https://www.flickr.com/photos/elpatojo/250157893 */
 	/* STEP 10b: set the background attachment */
-	
+	background-attachment: fixed;
 	/* STEP 10c: set the background image size to cover the viewport */
-	
+	background-size: cover;
 }
 /* STEP 5: Set font sizes according to a typographic scale (h1-h6 and p) */
 h1 {
@@ -28,7 +28,7 @@ h1 {
 }
 h1 em {
 	/* STEP 7e: The numero character/symbol is not heavy enough for the surrounding text, so we will set it with a heavy font, and eliminate the italics */
-	
+	font-style: normal;
 }
 h2 {
 	font-size: 3.6rem;
@@ -54,36 +54,39 @@ p {
 }
 /* STEP 7d: Set font for p in header to the same as the h2 and the h3 elements, using a descendant (contextual) selector */
 header p {
-	
+	font-family: "Raleway", "Century Gothic", Futura, sans-serif;
+	font-size: 1.2rem;
 }
 /* STEP 9a: Reduce space between headings in page-level header H1 */
-
+header h1 {
+	margin: 0;
+}
 /* STEP 8: Bump down subhead font size at top of article */
 header h2 {
-	
+	font-size: 2.4rem;
 	/* STEP 9b: Reduce space between headings in page-level header H2 */
-	
+	margin-top: 0;
 }
 /* STEP 9c: Move h3 and p closer together in article sections */
 section h3 {
-	
+	margin-bottom: 0;
 	/* STEP 13: Visual hierarchy needs improvement - reduce font size */
-	
+	font-size: 2.0rem;
 }
 section p {
 	
 	/* STEP 12a: Measure is 85+ - too long - bump up the font size */
-	
+	font-size: 1.6rem;
 	/* STEP 12b: Play with the leading (line-height) - raise to 1.8, then reduce to 1.2 - discuss typographic color and vertical rhythm */
-	
+	line-height: 1.6;
 	/* STEP 14a: Justification with text-align - left, right, center, justify */
-	
+	text-align: justify;
 	/* STEP 14b: Hyphenation - see Firefox implementation and change BODY width to 50% down below, then resize the window width in your browser to see the effect */
-	
+	hyphens: auto;
 	/* STEP 16a: Play with some non-standard CSS properties like text-rendering - this can enable things like ligatures - look at the combination of letters f and i */
-	
+	text-rendering: optimizeLegibility;
 	/* STEP 16b: Change the font to Calibri, then watch the 'fi' and 'fl' combination render as a ligature - for some reason, 'ff' does not for this font */
-	
+	font-family: Calibri;
 	/* https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering */
 }
 /* STEP 6: Basic layout - auto-centred single-column fixed width */
@@ -99,19 +102,22 @@ body {
 header {
 	background: #5C8096;
 	/* STEP 11a: Add whitespace - very important */
-	
+	padding: 3rem;
 	/* STEP 15: Inset text effect with text shadow */
-	
+	text-shadow: 0px 1px 1px #a2c0cf;
+}
+main {
+	padding-bottom: 2rem;
 }
 section {
 	/* STEP 11b: Add more whitespace */
-	
+	padding: 0 3rem;
 }
 footer {
 	background: #333;
 	color: #eee;
 	/* STEP 11c. Add even more whitespace */
-	
+	padding: 2rem 3rem;
 }
 footer h3 {
 	font-size: 1.4em;
