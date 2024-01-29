@@ -1,0 +1,21 @@
+@charset "utf-8";
+html {
+	font-family: sans-serif;
+	font-size: 200%;
+}
+/* Styles for invoice table
+------------------------------------------------------- */
+table {
+	border-collapse: collapse;
+}
+td, th {
+	border: 1px solid grey;
+	padding: 1em;
+}
+tfoot th {
+	text-align: right;
+}
+tfoot td {
+	font-weight: bold;
+}
+/* Align individual prices to the right */

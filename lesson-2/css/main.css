@@ -50,7 +50,7 @@ h6 {
 	font-size: 1.4rem;
 }
 p {
-	
+	font-size: 1rem;
 }
 /* STEP 7d: Set font for p in header to the same as the h2 and the h3 elements, using a descendant (contextual) selector */
 header p {
