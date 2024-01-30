@@ -15,7 +15,7 @@ body {
 #container {
 	border: 5px dotted red;
 	background: #FCC;
-	/* STEP 2: set width of #container to % of body */
+	/* STEP 2: set width of #container to 80% of body */
 	width: 80%;
 	/* STEP 3: center the entire layout with auto left and right margins */
 	margin: 0 auto;
@@ -77,7 +77,7 @@ footer {
 	border: 5px dotted orange;
 	background: #FF9;
 	/* STEP 7a: clear the footer (left | right | both) */
-	/* clear: left; */
+	/* clear: both; */
 	/* STEP 7b: Notice that the <main> element has collapsed - this is because all its children are floated - now comment out the above clear property and refresh the browser tab */
 }
 header,

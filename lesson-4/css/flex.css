@@ -14,7 +14,7 @@ body {
 #container {
 	border: 5px dotted red;
 	background: #FCC;
-	/* STEP 2: set width of #container to 8% of body */
+	/* STEP 2: set width of #container to 80% of body */
 	width: 80%;
 	/* STEP 3: center the entire layout with auto left and right margins */
 	margin: 0 auto;
@@ -50,28 +50,34 @@ main {
 	/* STEP 5b: Set the flex-direction to row for the <main> */
 	flex-direction: row;
 	/* STEP 7: Modify the align-items property on the <main> (default is stretch - see https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-align-items for more */
-	align-items: flex-start;
+	align-items: stretch;
 }
 
 main > nav {
 	border: 5px dotted green;
 	background: #CFC;
 	/* STEP 6a: Set the flex-basis value to 20% */
-	flex-basis: 20%;
+	flex-basis: 100px;
+	flex-grow: 1;
+	flex-shrink: 1;
 }
 
 main > section {
 	border: 5px dotted darkorange;
 	background: #FC9;
 	/* STEP 6b: Set the flex-basis value to 60% */
-	flex-basis: 60%;
+	flex-basis: 250px;
+	flex-grow: 2;
+	flex-shrink: 2;
 }
 
 main > aside {
 	border: 5px dotted purple;
 	background: #C9C;
 	/* STEP 6c: Set the flex-basis value to 20% */
-	flex-basis: 20%;
+	flex-basis: 100px;
+	flex-grow: 1;
+	flex-shrink: 1;
 	/* STEP 6d: Proceed to https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flex to learn about flex-basis, flex-grow, and flex-shrink */
 }
 
