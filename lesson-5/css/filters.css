@@ -1,0 +1,44 @@
+body {
+    width: 50%;
+    margin: 0 auto;
+}
+main section:nth-child(1) img:hover {
+    /* STEP 1: blur() */
+    filter: blur(5px);
+}
+main section:nth-child(2) img:hover {
+    /* STEP 2: brightness() */
+    filter: brightness(200%);
+}
+main section:nth-child(3) img:hover {
+    /* STEP 3: contrast() */
+    filter: contrast(200%);
+}
+main section:nth-child(4) img:hover {
+    /* STEP 4: drop-shadow() */
+    filter: drop-shadow(16px 16px 10px black);
+}
+main section:nth-child(5) img:hover {
+    /* STEP 5: grayscale() */
+    filter: grayscale(80%);
+}
+main section:nth-child(6) img:hover {
+    /* STEP 6: hue-rotate() */
+    filter: hue-rotate(90deg);
+}
+main section:nth-child(7) img:hover {
+    /* STEP 7: invert() */
+    filter: invert(100%);
+}
+main section:nth-child(8) img:hover {
+    /* STEP 8: opacity() */
+    filter: opacity(50%);
+}
+main section:nth-child(9) img:hover {
+    /* STEP 9: saturate() */
+    filter: saturate(200%);
+}
+main section:nth-child(10) img:hover {
+    /* STEP 10: sepia() */
+    filter: sepia(100%);
+}
