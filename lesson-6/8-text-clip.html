@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Text Clipping</title>
+	<style>
+		body {
+			background-color: black;
+		}
+		h1 {
+			font: 1200%/1.2 Impact, sans-serif;
+			text-align: center;
+			/* STEP 1: Set the text color to transparent */
+			color: transparent;
+			/* STEP 2: Set the -webkit-background-clip property to text */
+			-webkit-background-clip: text;
+			background-clip: text;
+			
+			/* STEP 3: Apply a background-image to show through the transparent text */
+			/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#bed3ad+0,9e8e68+17,703877+33,00e7ef+61,e7fc00+85&1+47,0.68+100 */
+			background: linear-gradient(135deg,  hsla(93,30%,75%,1) 0%,hsla(42,22%,51%,1) 17%,hsla(293,36%,35%,1) 33%,hsla(197,52%,46%,1) 47%,hsla(182,100%,47%,0.92) 61%,hsla(65,100%,49%,0.77) 85%,hsla(65,100%,49%,0.68) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			background-image: url("img/sunset.jpg");
+			/* STEP 4: Alternatively - use a gradient as the background-image */
+
+			/* STEP 5: Apply another non-standard visual effect -webkit-text-stroke-color (and width) */
+
+		}
+		/* "Florida gulf coast" By Mmacbeth - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=39319981 */
+	</style>
+</head>
+<body>
+	<h1>Text Clipping</h1>
+</body>
+</html>

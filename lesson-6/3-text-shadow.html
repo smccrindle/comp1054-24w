@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Text Shadow | COMP1054 Web User Interface Design</title>
+	<style>
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 300%;
+			color: black;
+		}
+		/* STEP 1: Basic shadow with x and y offset */
+		.basic {
+			text-shadow: 2px 3px;
+		}
+		/* STEP 2: Basic shadow with offset plus color */
+		.basic-color {
+			text-shadow: 0.05em 0.05em grey;
+		}
+		/* STEP 3: Text shadow with a blur radius */
+		.blur {
+			text-shadow: 0.05em 0.05em 0.1em grey;
+		}
+		/* STEP 4: Multiple text shadows */
+		.multiple {
+				text-shadow:
+					5px 5px orange,
+					-5px 0 lime,
+					-5px -5px cyan,
+					0 5px hotpink,
+					5px -5px purple;
+		}
+	</style>
+</head>
+<body>
+<p class="basic">Basic Shadow</p>
+<p class="basic-color">Basic Shadow with Color</p>
+<p class="blur">Blur Radius</p>
+<p class="multiple">Multiple Text Shadows</p>
+</body>
+</html>
