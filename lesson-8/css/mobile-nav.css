@@ -40,20 +40,23 @@ img {
 }
 /* STEP 5: Put diagnostic borders around HEADER, HEADER H1, and HEADER NAV */
 header {
-	
+	outline: 3px dashed red;
 	background: var(--primary-color);
 	/* STEP 6a: Attach the HEADER to the top left of the viewport (fixed) */
-	
+	position: fixed;
+	top: 0;
+	left: 0;
 	/* STEP 6b: Set the width to 100% (position: fixed sets with to auto) */
-	
+	width: 100%;
 	/* STEP 6c: Arrange the children of the HEADER (H1 and NAV) with flexbox, using display: flex, and justify-content */
-	
+	display: flex;
+	justify-content: space-between;
 	/* STEP 19d: Set the z-index to 50 to set the header (and the containing navigation panel) to be on top of the footer at the bottom of the viewport */
 	
 }
 /* Link styling for the page-level header */
 header h1 {
-	
+	outline: 3px dashed orange;
 	color: var(--text-and-icons);
 	margin: 20px;
 }
@@ -73,7 +76,7 @@ header a:active {
 	color: var(--primary-text);
 }
 header nav{
-	
+	outline: 3px dashed green;
 }
 main {
 	/* STEP 18a: The content of the page is a bit hard to read - let's add a top margin to the MAIN element, center it, and some padding */
@@ -101,13 +104,18 @@ footer {
 header nav ul {
 	background-color: var(--accent-color);
 	/* STEP 7a: This is the navigation panel - let's make it look good, before we hide it off the screen */
-	
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
 	/* STEP 7b: When the navigation panel is visible, it will need to overlay all of the content on the screen, so we need to attach it to the viewport with position: fixed, 0 from the top of the screen, and a bit over (15% or so) from the left */
-	
+	position: fixed;
+	top: 0;
+	/* left: 15%; */
 	/* STEP 7c: It needs to be a great big wide panel, so make it 100% wide and tall */
-	
+	width: 100%;
+	height: 100%;
 	/* STEP 9: Now we need to hide the whole thing off the screen to the right, so change the above left: property to 100% (from the left margin) */
-	
+	left: 100%;
 	/* STEP 13a: Set the z-index to 100 so that we can control the stacking order with respect to the menu buttons that are now hidden from view */
 	
 	/* STEP 13c: Set the opacity of the navigation panel to 50% so that we can see the interaction with the checkbox underneath */
@@ -118,7 +126,8 @@ header nav ul {
 }
 header nav ul a {
 	/* STEP 8: Make the links wider for greater accessibility with touch */
-	
+	display: block;
+	padding: 10px;
 }
 #toggle-menu {
 	/* STEP 15: Hide the checkbox form element - the label is all we need to be visible (thanks to the for="toggle-menu" attribute in the HTML) */
@@ -127,9 +136,12 @@ header nav ul a {
 label[for="toggle-menu"] {
 	color: var(--text-and-icons);
 	/* STEP 10a: Make the menu and close menu icons look good */
-	
+	font-size: 2rem;
+	width: 2rem;
+	text-align: center;
 	/* STEP 10b: Position the icons to the top right of the viewport */
-	
+	position: fixed;
+	right: 20px;
 	/* STEP 10c: Change the mouse cursor (arrow) to a finger pointer to encourage interaction with the icon on desktop */
 	
 	/* STEP 13b: Set the z-index for the LABEL to 200 so that it sits on top of the navigation panel */

@@ -6,9 +6,9 @@
 	<!-- Optimize viewing on mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- STEP 1: Normalize your CSS before applying any custom styles -->
-	
+	<link href="css/normalize.css" rel="stylesheet" />
 	<!-- STEP 2: Add your custom styles -->
-	
+	<link href="css/mobile-nav.css" rel="stylesheet" />
 	<script src="js/scripts.js" defer></script>
 </head>
 <body>
@@ -17,14 +17,14 @@
 		<nav>
 			<!-- The input and label elements below are used for the touch-based mobile navigation powered solely by CSS. Read more at https://css-tricks.com/the-checkbox-hack/ -->
 			<!-- STEP 3: Add a checkbox input element with id="toggle-menu" -->
-			
+			<input type="checkbox" id="toggle-menu" />
 			<!-- STEP 4a: Include a label pointing to the above checkbox with the for attribute (very important step) -->
-			
+			<label for="toggle-menu">
 				<!-- STEP 4b: Add a hamburger icon (&#x2630;) for the navigation menu panel -->
-				
+				<span id="hamburger">&#x2630;</span>
 				<!-- STEP 4c: Now add a big close (X) icon (&#x00D7;) to close the navigation menu panel, then proceed to mobile-nav.css for the next step -->
-				
-			
+				<span id="close">&#x00D7;</span>
+			</label>
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">About</a></li>
