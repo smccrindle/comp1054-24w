@@ -40,7 +40,7 @@ img {
 }
 /* STEP 5: Put diagnostic borders around HEADER, HEADER H1, and HEADER NAV */
 header {
-	outline: 3px dashed red;
+	/* outline: 3px dashed red; */
 	background: var(--primary-color);
 	/* STEP 6a: Attach the HEADER to the top left of the viewport (fixed) */
 	position: fixed;
@@ -52,11 +52,11 @@ header {
 	display: flex;
 	justify-content: space-between;
 	/* STEP 19d: Set the z-index to 50 to set the header (and the containing navigation panel) to be on top of the footer at the bottom of the viewport */
-	
+	z-index: 50;
 }
 /* Link styling for the page-level header */
 header h1 {
-	outline: 3px dashed orange;
+	/* outline: 3px dashed orange; */
 	color: var(--text-and-icons);
 	margin: 20px;
 }
@@ -76,22 +76,26 @@ header a:active {
 	color: var(--primary-text);
 }
 header nav{
-	outline: 3px dashed green;
+	/* outline: 3px dashed green; */
 }
 main {
 	/* STEP 18a: The content of the page is a bit hard to read - let's add a top margin to the MAIN element, center it, and some padding */
-	
+	margin: 100px auto;
+	padding: 20px;
 	/* STEP 18b: We don't want the measure of the lines of body text to get too long - let's set a max-width on the MAIN element */
-	
+	max-width: 768px;
 }
 footer {
 	background-color: var(--primary-color);
 	color: var(--text-and-icons);
 	/* STEP 19a: Let's fix the footer - attach it to the bottom of the viewport, add some padding, and set the width to 100% */
-	
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	padding: 10px 20px;
 	font-size: 0.75rem;
 	/* STEP 19b: When the navigation panel is visible, the FOOTER shouldn't appear on top of it - set the z-index so the FOOTER is underneath the panel */
-	
+	/* z-index: 50; */
 	/* STEP 19c: Notice this doesn't work - this is due to a vertical stacking order context (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context). We need to elevate the z-index of the HEADER element above to address this */
 }
 
@@ -117,12 +121,12 @@ header nav ul {
 	/* STEP 9: Now we need to hide the whole thing off the screen to the right, so change the above left: property to 100% (from the left margin) */
 	left: 100%;
 	/* STEP 13a: Set the z-index to 100 so that we can control the stacking order with respect to the menu buttons that are now hidden from view */
-	
+	z-index: 100;
 	/* STEP 13c: Set the opacity of the navigation panel to 50% so that we can see the interaction with the checkbox underneath */
-	
+	/* opacity: 50%; */
 	/* STEP 16: Remove the opacity declaration above - we no longer need it */
 	/* STEP 17: Let's make this really cool and animate the navigation panel so that it slides out to the left by transitioning any change to the left: property value */
-	
+	transition: left 0.1s;
 }
 header nav ul a {
 	/* STEP 8: Make the links wider for greater accessibility with touch */
@@ -131,7 +135,7 @@ header nav ul a {
 }
 #toggle-menu {
 	/* STEP 15: Hide the checkbox form element - the label is all we need to be visible (thanks to the for="toggle-menu" attribute in the HTML) */
-	
+	display: none;
 }
 label[for="toggle-menu"] {
 	color: var(--text-and-icons);
@@ -143,24 +147,26 @@ label[for="toggle-menu"] {
 	position: fixed;
 	right: 20px;
 	/* STEP 10c: Change the mouse cursor (arrow) to a finger pointer to encourage interaction with the icon on desktop */
-	
+	cursor: pointer;
 	/* STEP 13b: Set the z-index for the LABEL to 200 so that it sits on top of the navigation panel */
-	
+	z-index: 200;
 }
 #close {
 	font-weight: bold;
 	/* STEP 11: Hide the big close menu "X" to start with - we only need this to close the menu once the user opens it using the hamburger icon */
-	
+	display: none;
 }
 /* STEP 12: Reveal the navigation menu UL when the label for the #toggle-menu input is checked, using the general sibling selector (~) */
-
+#toggle-menu:checked ~ ul {
+	left: 15%;
+}
 #toggle-menu:checked + label #close {
 	/* STEP 14a: If the toggle-menu checkbox is checked, show the menu close button/icon */
-	
+	display: block;
 }
 #toggle-menu:checked + label #hamburger {
 	/* STEP 14b: If the toggle-menu checkbox is checked, then we should hide the hamburger button/icon because the close button/icon is now visible */
-	
+	display: none;
 }
 
 /* Laptop or desktop navigation system layout
@@ -174,17 +180,20 @@ label[for="toggle-menu"] {
 	/* Hide the hamburger menu checkbox label (checkbox is already hidden) */
 	label[for="toggle-menu"] {
 			/* STEP 20: For large screens, we don't need the hamburger or the close menu icon/button */
-			
+			display: none;
 	}
 	header nav ul {
 			/* STEP 21a: Restore the navigation so that it is back in the regular flow of the page */
-			
+			position: static;
 			/* STEP 21b: We don't need the grey background, anymore */
-			
+			background-color: transparent;
+	}
+	header nav ul {
+		display: flex;
 	}
 	header nav li {
 			/* STEP 22: Set the LI elements to render horizontally instead of vertically */
-			
+			/* display: inline-block; */
 	}
 	header a:hover {
 			color: var(--light-primary-color);
