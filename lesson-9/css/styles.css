@@ -1,0 +1,145 @@
+body{
+    font-family: sans-serif;
+    background: #999;
+    min-width: 320px;
+    color: #333;
+}
+#container {
+    width: 90%;
+    margin: 0 auto;
+}
+header {
+    background: #ccc;
+    padding-top: 1em;
+}
+header nav {
+    overflow: hidden;
+}
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+    left: 50%;
+}
+header nav ul li {
+    float: left;
+    position: relative;
+    right: 50%;
+    margin-left: 0.25em;
+    background:#ddd;
+}
+header nav a {
+    display: block;
+    padding: 0.75em;
+    color: #fff;
+    text-decoration: none;
+}
+header nav a:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* STEP 1a: Persistent navigation - manually add the class="floater" to the HEADER NAV and build out a fixed horizontal navigation bar */
+header nav.floater {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+header nav.floater li {
+    background-color: transparent;
+}
+/* STEP 1b: Remove the class="floater" from the HTML */
+
+main {
+    background: white;
+    clear: both;
+    line-height: 1.4;
+    padding: 1em 0;
+}
+main p {
+    margin-top: 0;
+}
+main blockquote {
+}
+
+header h1 {
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 300%;
+    margin: 0.5em;
+    text-shadow: 3px 3px 0 #333;
+    letter-spacing: -0.1em;
+    text-align: center;
+}
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
+blockquote h2 {
+    text-transform: uppercase;
+}
+
+/* STEP 7a: Build out the styles for the pullquote, adding the class="pullquote2" to the SPAN element in the HTML to see how the styles look */
+.pullquote2 {
+    display: block;
+    float: right;
+    padding: 0 0 0 20px;
+    margin: 0 1em 0.5em 1em;
+    width: 35%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: right;
+    color: #ccc;
+    border-left: 3px solid #ccc;
+}
+/* STEP 7b: Add leading quotation marks and style them */
+.pullquote2::before {
+    content: "\201C";
+    display: block;
+    font-size: 120px;
+    float: left;
+    position: relative;
+    top: -0.3em;
+    color: #ccc;
+}
+/* STEP 7c: Remove the class"pullquote2" from the HTML */
+footer {
+    background: #ccc;
+    padding: 1em;
+}
+footer h3 {
+    margin: 0;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 150%;
+    margin: 0.5em;
+    color: white;
+    text-shadow: 3px 3px 0 #333;
+    letter-spacing: -0.05em;
+    text-align: center;
+}
+footer p {
+    font-size: 50%;
+    text-align: center;
+}
+footer a {
+    color: black;
+}
+/* STEP 3a: Build out the sticky footer 'Back to top' button styles */
+footer a.top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: rgb(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    /* STEP 3b: Now hide the button entirely, and we will make it visible later with JavaScript */
+    /* display: none; */
+    visibility: hidden;
+}
+
