@@ -52,5 +52,8 @@ details[open] summary::after {
 }
 /* STEP 10: Add rounded corners to the first and last DETAILS elements */
 details:first-of-type {
-	
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+details:last-of-type {
+	border-radius: 0 0 0.5rem 0.5rem;
 }
