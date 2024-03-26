@@ -3,23 +3,15 @@ const details = document.querySelectorAll("details");
 details.forEach((detail) => {
 	detail.addEventListener("toggle", (event) => {
 		if (event.target.open) {
-			/* the element was toggled open */
-			console.log("This one was closed.");
-			closeOthers(event.target);
-		} else {
-			/* the element was toggled closed */
-			console.log("This one was open.");
+			// The browser just added the "open" attribute, so this <details> element was closed
+			details.forEach((detail) => {
+				// If this <details> element is not the one that was just clicked, close it
+				if (detail !== event.target) {
+					detail.removeAttribute("open");
+				}
+			});
 		}
 	});
 });
 
-// Function to close all the other DETAILS elements (passing in the one that was toggled)
-function closeOthers (openDetailElement) {
-	details.forEach((detail) => {
-		if (detail !== openDetailElement) {
-			detail.removeAttribute("open");
-		}
-	});
-}
-
-// This experiement based on https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+// This experiment based on https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
